@@ -57,8 +57,6 @@
  			// Get link id
  			id = $(this).attr("id");
 
- 			$(this).removeClass(settings.myClass);
-
  			// Compare treated url with id
  			if( id == url ){ $(this).addClass(settings.myClass); }
  		});
