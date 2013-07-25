@@ -52,7 +52,7 @@
  			url = current.substr(slash, minusExt);
  		}
 
- 		// Check if is root directory ( home page is should be first link on the menu )
+ 		// Check if is root directory ( home page should be first link on the menu )
  		if( link.length == 0 ){
  			
  			$(this).first().addClass(settings.minhaClasse);
