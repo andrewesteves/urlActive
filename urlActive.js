@@ -52,14 +52,23 @@
  			url = current.substr(slash, minusExt);
  		}
 
- 		// Handle Collection
- 		return this.each(function(){
- 			// Get link id
- 			id = $(this).attr("id");
+ 		// Check if is root directory ( home page is should be first link on the menu )
+ 		if( link.length == 0 ){
+ 			
+ 			$(this).first().addClass(settings.minhaClasse);
+ 		
+ 		}else{
 
- 			// Compare treated url with id
- 			if( id == url ){ $(this).addClass(settings.myClass); }
- 		});
+	 		// Handle Collection
+	 		return this.each(function(){
+	 			// Get link id
+	 			id = $(this).attr("id");
+
+	 			// Compare treated url with id
+	 			if( id == url ){ $(this).addClass(settings.myClass); }
+	 		});
+
+ 		}
  	}
 
  })(jQuery);
