@@ -13,7 +13,7 @@
  */
  (function($){
 
- 	$.fn.urlActive = function( options ){
+  $.fn.urlActive = function( options ){
 
  		// Variables
  		var defaults, settings, current, total, slash, link, ext, myLink, url, withExt, minusExt, id;
@@ -52,23 +52,17 @@
  			url = current.substr(slash, minusExt);
  		}
 
- 		// Check if is root directory ( home page should be first link on the menu )
- 		if( link.length == 0 ){
- 			
- 			$(this).first().addClass(settings.minhaClasse);
- 		
- 		}else{
+ 		// Handle Collection
+ 		return this.each(function(){
+ 			// Get link id
+ 			id = $(this).attr("id");
 
-	 		// Handle Collection
-	 		return this.each(function(){
-	 			// Get link id
-	 			id = $(this).attr("id");
+ 			$(this).removeClass(settings.myClass);
 
-	 			// Compare treated url with id
-	 			if( id == url ){ $(this).addClass(settings.myClass); }
-	 		});
+ 			// Compare treated url with id
+ 			if( id == url ){ $(this).addClass(settings.myClass); }
+ 		});
 
- 		}
  	}
 
  })(jQuery);
