@@ -15,11 +15,14 @@
 
   $.fn.urlActive = function( options ){
 
- 		// Variables
- 		var defaults, settings, current, total, slash, link, ext, myLink, url, withExt, minusExt, id;
+  	// Variables
+ 		var defaults, settings, current, total, slash, link, ext, myLink, url, withExt, minusExt, id, home;
 
  		// Defaults values class
- 		defaults = { 'myClass' : 'active' };
+ 		defaults = { 'myClass' : 'active', 'myId' : '#menu' };
+
+ 		// Get first link ( must be the home page )
+ 		home = $(this).first().attr("href");
 
  		// if there is no value passed as a parameter, we can deal with default values $.extend
  		settings = $.extend( {}, defaults, options );
@@ -58,7 +61,12 @@
  			id = $(this).attr("id");
 
  			// Compare treated url with id
- 			if( id == url ){ $(this).addClass(settings.myClass); }
+ 			if( id == url ){ 
+ 				$(this).addClass(settings.myClass); 
+ 			}else if( home == current ){
+ 				// Add a style in the first link ( home page )
+ 				$(settings.myId + " a:first").addClass(settings.myClass);
+ 			}
  		});
 
  	}
