@@ -1,4 +1,4 @@
-<h1>urlActive jQuery plugin</h1>
+<h1>urlActive() jQuery plugin</h1>
 
 <h2>jQuery plugin to add a style to the link id according to url</h2>
 
