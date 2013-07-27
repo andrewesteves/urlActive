@@ -4,6 +4,8 @@
 
 <h4>The usage:</h4>
 
+<i>Important in your html the href must be the entire link like "http://meusite.com.br/" and so on</i><br/>
+
 Need to create a class named .active and set an id named #menu in your stylesheet to get default value
 <pre>
 <code>
@@ -36,6 +38,8 @@ $("#myIdName a").urlActive({
 <h2>plugin jQuery para adicionar um estilo para o ID do link de acordo com a url</h2>
 
 <h4>O uso:</h4>
+
+<i> importante em sua html a href deve ser todo o link como "http://meusite.com.br/" e assim por diante </ i><br/>
 
 Necessidade de criar uma classe chamada .active em sua folha de estilo para obter o valor default
 
