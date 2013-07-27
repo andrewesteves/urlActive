@@ -35,11 +35,11 @@ $("#myIdName a").urlActive({
 
 <h3>Português</h3>
 
-<h2>plugin jQuery para adicionar um estilo para o ID do link de acordo com a url</h2>
+<h2>Plugin jQuery para adicionar um estilo para o ID do link de acordo com a url.</h2>
 
 <h4>O uso:</h4>
 
-<i> importante em sua html a href deve ser todo o link como http://hagile.com.br/ e assim por diante </ i><br/>
+<i>Importante em sua html a href deve ser todo o link como http://hagile.com.br/ e assim por diante </ i><br/>
 
 Necessidade de criar uma classe chamada .active em sua folha de estilo para obter o valor default
 
