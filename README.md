@@ -4,7 +4,7 @@
 
 <h4>The usage:</h4>
 
-Need to create a class named .active in your stylesheet to get default value
+Need to create a class named .active and set an id named #menu in your stylesheet to get default value
 <pre>
 <code>
 $("#menu a").urlActive();
@@ -17,6 +17,16 @@ To set your own style class just pass the parameter myClass
 <code>
 $("#menu a").urlActive({
   'myClass' : 'myNameClass'
+});
+</code>
+</pre>
+
+To set your own id parameter myId
+
+<pre>
+<code>
+$("#myIdName a").urlActive({
+  'myId' : '#myIdName'
 });
 </code>
 </pre>
@@ -45,3 +55,12 @@ $ ("#menu a").urlActive ({
 </code>
 </pre>
 
+Para definir seu próprio id de estilo basta passar o parâmetro myId
+
+<pre>
+<code>
+$("#myIdName a").urlActive({
+  'myId' : '#myIdName'
+});
+</code>
+</pre>
