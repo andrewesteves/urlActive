@@ -4,7 +4,7 @@
 
 <h4>The usage:</h4>
 
-<i>Important in your html the href must be the entire link like http://hagile.com.br/ and so on</i><br/>
+<i>Important in your html the href must be the entire link like http://hagile.com.br/, the menu id is #menu and the css style is .active</i><br/>
 
 Need to create a class named .active and set an id named #menu in your stylesheet to get default value
 <pre>
@@ -39,7 +39,7 @@ $("#myIdName a").urlActive({
 
 <h4>O uso:</h4>
 
-<i>Importante em sua html a href deve ser todo o link como http://hagile.com.br/ e assim por diante </i><br/>
+<i>Importante em sua html a href deve ser todo o link como http://hagile.com.br/, o id do menu é #menu e o css style é. active</i><br/>
 
 Necessidade de criar uma classe chamada .active em sua folha de estilo para obter o valor default
 
