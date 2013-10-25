@@ -45,11 +45,11 @@
  		// Check if has an extension or not and return the value
  		myLink = ( ( ext > 0 ) ? link : ext );
 
- 		// Has an extension
- 		if( $.isNumeric(myLink)  ){
+ 		// Hasn't an extension
+ 		if( !$.isNumeric(myLink)  ){
  			url = current.substr(slash, total);
  		}else{
- 		// Hasn't an extension
+ 		// Has an extension
  			withExt  = current.indexOf(".");
  			minusExt = withExt - slash;
  			url = current.substr(slash, minusExt);
