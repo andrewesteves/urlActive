@@ -36,7 +36,7 @@
  		// Find the last slash from current plus one to jump the slash
  		slash = current.lastIndexOf("/") + 1; 
 
- 		// Locate de position to link the id and href
+ 		// Get the url treated to link the id and href
  		link = current.substring(slash, total);
 
  		// Get the current extension value
