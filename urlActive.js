@@ -25,7 +25,7 @@
  		settings = $.extend( {}, defaults, options );
 
  		// Get current page location
- 		current = $(location).attr("href");
+ 		current = $(location).attr('href');
 
  		// Count characters from current url
  		total = current.length;
@@ -40,17 +40,20 @@
  		ext = current.indexOf(".");
 
  		// Get first link ( must be the home page )
- 		home = current;
- 		homeActive = $(settings.myId + ' a:first').attr("href");
- 		homeIndexActive = $(settings.myId + ' a:first').attr("href") + ext;
+ 		home = $(settings.myId + ' a:first').attr("href");
+ 		homeExt = home.indexOf(".");
 
- 		if(home == homeActive || home == homeIndexActive){
+ 		if(current == home){
  			homeUrl = current.substr(slash, total);
- 		}else{
+ 			homeUrlTotal = link;
+ 		}else if(homeExt > 0 && home == current){
  			homeWithExt  = current.indexOf(".");
  			homeMinusExt = withExt - slash;
  			homeUrl = current.substr(slash, minusExt);
  			homeUrlTotal = current.substr(slash, total);
+ 		}else{
+ 			homeUrl = null;
+ 			homeUrlTotal = null;
  		}
 
  		// Check if has an extension or not and return the value
