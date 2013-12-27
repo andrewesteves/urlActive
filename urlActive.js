@@ -21,9 +21,6 @@
  		// Defaults values class
  		defaults = { 'myClass' : 'active', 'myId' : '#menu' };
 
- 		// Get first link ( must be the home page )
- 		home = $(this).first().attr("href");
-
  		// if there is no value passed as a parameter, we can deal with default values $.extend
  		settings = $.extend( {}, defaults, options );
 
@@ -41,6 +38,19 @@
 
  		// Get the current extension value
  		ext = current.indexOf(".");
+
+ 		// Get first link ( must be the home page )
+ 		homeActive = $(settings.myId + ' a:first').attr("href");
+ 		homeIndexActive = $(settings.myId + ' a:first').attr("href") + ext;
+
+ 		if(home == homeActive || home == homeIndexActive){
+ 			homeUrl = current.substr(slash, total);
+ 		}else{
+ 			homeWithExt  = current.indexOf(".");
+ 			homeMinusExt = withExt - slash;
+ 			homeUrl = current.substr(slash, minusExt);
+ 			homeUrlTotal = current.substr(slash, total);
+ 		}
 
  		// Check if has an extension or not and return the value
  		myLink = ( ( ext > 0 ) ? link : false );
@@ -63,7 +73,7 @@
  			// Compare treated url with id
  			if( id == url ){ 
  				$(this).addClass(settings.myClass); 
- 			}else if( home == current ){
+ 			}else if( homeUrl == '' || homeUrlTotal == link ){
  				// Add a style in the first link ( home page )
  				$(settings.myId + " a:first").addClass(settings.myClass);
  			}
