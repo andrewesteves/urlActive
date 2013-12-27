@@ -40,6 +40,7 @@
  		ext = current.indexOf(".");
 
  		// Get first link ( must be the home page )
+ 		home = current;
  		homeActive = $(settings.myId + ' a:first').attr("href");
  		homeIndexActive = $(settings.myId + ' a:first').attr("href") + ext;
 
