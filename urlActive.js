@@ -36,17 +36,17 @@
  		// Find the last slash from current plus one to jump the slash
  		slash = current.lastIndexOf("/") + 1; 
 
- 		// Change the current if it hasn't an extension
+ 		// Locate de position to link the id and href
  		link = current.substring(slash, total);
 
  		// Get the current extension value
  		ext = current.indexOf(".");
 
  		// Check if has an extension or not and return the value
- 		myLink = ( ( ext > 0 ) ? link : ext );
+ 		myLink = ( ( ext > 0 ) ? link : false );
 
  		// Hasn't an extension
- 		if( !$.isNumeric(myLink)  ){
+ 		if(!myLink){
  			url = current.substr(slash, total);
  		}else{
  		// Has an extension
