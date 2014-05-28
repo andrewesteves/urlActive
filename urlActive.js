@@ -5,8 +5,7 @@
  * Developed by Andrew Esteves
  * http://andrewesteves.com.br
  *
- * Copyright 2013 Hagile agência digital
- * http://hagile.com.br
+ * Copyright 2013 Andrew Esteves
  * Released under the MIT license
  * http://pt.wikipedia.org/wiki/MIT_License
  *
